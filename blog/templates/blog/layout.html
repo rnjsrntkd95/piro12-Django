@@ -1,2 +1,15 @@
 {% extends "layout.html" %}
+{% load static %}
+
 {% block title %}Blog by Ask Company{% endblock %}
+
+{% block extra_head %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static "blog/blog.css %}" %}"/>
+    <style>
+    </style>
+{% endblock %}
+
+{% block extra_body %}
+    {{ block.super }}
+{% endblock %}
