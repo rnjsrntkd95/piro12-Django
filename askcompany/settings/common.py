@@ -11,10 +11,14 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from os.path import dirname, abspath
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# settings.py(common.py)를 settings라는 디렉토리 안에 한번 더 넣어주었기 때문에 dirname을 한번 더 해줌
+BASE_DIR = dirname(dirname(dirname(abspath(__file__))))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
