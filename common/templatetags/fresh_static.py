@@ -12,6 +12,6 @@ class FreshStaticNode(StaticNode):
             url += '?_={}'.format(int(time()))
             return url
 
-    @register.tag('flesh_static')
+    @register.tag('fresh_static')
     def do_static(parser, token):
         return FreshStaticNode.handle_token(parser, token)
