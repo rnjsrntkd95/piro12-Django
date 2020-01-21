@@ -19,7 +19,6 @@ def item_list(request):
     q = request.GET.get('q', '')
     if q:
         qs = qs.filter(title__icontains=q)
-
     logger.debug(f'query : {q}')
 
     return render(request, 'shop/item_list.html', {
